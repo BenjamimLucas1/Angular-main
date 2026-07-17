@@ -1,0 +1,12 @@
+:host {
+    background-color: red;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+.pagina-ativa {
+    border: 1px solid green;
+}
