@@ -1,0 +1,10 @@
+<ul>
+    @for(aluno of alunos; track aluno) {
+    <li>Meu queridinho: {{aluno}}</li>
+    } @empty {
+    <p>Não tem nenhum aluno queridinho</p>
+    }
+</ul>
+
+<h1 id="contador">0</h1>
+<button id="incrementar">Incrementar</button>
