@@ -5,13 +5,19 @@ import { MenuResponsivo } from './feats/menu-responsivo/menu-responsivo';
 import { Event } from './feats/event/event';
 import { PropBinding } from './feats/prop-binding/prop-binding';
 import { TwoWayBind } from './feats/two-way-bind/two-way-bind';
+import { AlunosFavoritos } from './feats/alunos-favoritos/alunos-favoritos';
+import { Exercicios } from './feats/exercicios/exercicios';
+import { ExemploSignal } from './feats/exercicios/exemplo-signal/exemplo-signal';
 
 export const routes: Routes = [
-    {path: 'contato', component: Contato},
-    {path: 'home', component: Home},
-    {path: 'menu-responsivo', component: MenuResponsivo},
-    {path: 'event', component: Event},
-    {path: 'prop-binding', component: PropBinding},
-    {path: 'bind', component: TwoWayBind},
-    {path: '', redirectTo: 'home', pathMatch: 'full'}
+    { path: 'contato', component: Contato },
+    { path: 'home', component: Home },
+    { path: 'menu-responsivo', component: MenuResponsivo },
+    { path: 'event', component: Event },
+    { path: 'prop-binding', component: PropBinding },
+    { path: 'bind', component: TwoWayBind },
+    { path: 'alunos', component: AlunosFavoritos },
+    { path: 'exercicios', component: Exercicios },
+    { path: 'exemplo-signal', component: ExemploSignal},
+    { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
