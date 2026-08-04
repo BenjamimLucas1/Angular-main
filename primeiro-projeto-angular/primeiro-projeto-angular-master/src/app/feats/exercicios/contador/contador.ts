@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-contador',
@@ -7,21 +7,22 @@ import { Component } from '@angular/core';
   styleUrl: './contador.css',
 })
 export class Contador {
-  protected contador: number = 0;
+  protected contador = signal<number>(0);
 
   private limiteImposto = 10;
 
   protected incrementarValor() {
-    this.contador++;
+    this.contador.update(valor => valor + 1); /*O nome dentro do parenteses pode ser qualquer um*/ 
+    this.checarValor();
   }
 
   private checarValor() {
-    if (this.contador > 10) {
-      this.contador = 0;
+    if (this.contador() > this.limiteImposto) {
+      this.contador.set(0)
     }
   }
 
   protected redefinirValor() {
-    this.contador = 0;
+    this.contador.set(0)
   }
 }
