@@ -1,12 +1,13 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Header } from "./components/header/header";
+import { Header } from './components/header/header';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Header],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  changeDetection: ChangeDetectionStrategy.Eager,
+  styleUrl: './app.css',
 })
 export class App {
   protected readonly title = signal('primeiro-projeto-angular');

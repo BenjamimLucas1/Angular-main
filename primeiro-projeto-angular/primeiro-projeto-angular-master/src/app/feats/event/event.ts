@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-event',
   imports: [],
   templateUrl: './event.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './event.css',
 })
 export class Event {
   clicarNoBotao() {
-    console.log('O botão foi clicado')
+    console.log('O botão foi clicado');
   }
 }

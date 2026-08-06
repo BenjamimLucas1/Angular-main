@@ -1,12 +1,14 @@
-<form>
+<form (submit)="cadastrarProduto($event)">
 
     <!-- Input do título -->
-    <input type="text" [formField]="produtoForm.">
+    <input type="text" placeholder="Título" [formField]="produtoForm.titulo">
 
     <!-- Input da descrição -->
-    <input type="text">
+    <input type="text" placeholder="Descrição" [formField]="produtoForm.descricao">
 
     <!-- Input do preço -->
-    <input type="text" inputmode="numeric">
+    <input type="text" placeholder="Preço" inputmode="numeric" [formField]="produtoForm.preco">
+
+    <button>Cadastrar produto</button>
 
 </form>
