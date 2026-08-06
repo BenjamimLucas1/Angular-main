@@ -8,5 +8,5 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './two-way-bind.css',
 })
 export class TwoWayBind {
-  texto = ''
+  nome = ''
 }
